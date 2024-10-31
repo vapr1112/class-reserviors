@@ -86,8 +86,10 @@ public:
 
 	void comp_type(reservoir reservoir_p) const//проверяет, относятся ли водоемы к одному типу
 	{
-		strcmp(type, reservoir_p.type) == 0 ? cout << "\nводоемы относятся к одному типу\n" : cout << "\nводоемы относятся к разным типам\n";
+		strcmp(type, reservoir_p.type) == 0 ? cout << "\nводоемы относятся к одному типу\n": cout << "\nводоемы относятся к разным типам\n";
 	}
+
+	void comp_square(reservoir reservoir_p);//сравнивает площади водоемов
 
 	~reservoir()//деструктор
 	{

@@ -45,6 +45,11 @@ int main()
 			cin >> index >> index_2;
 			reserviors[index].comp_type(reserviors[index_2]);
 			break;
+		case COMPARASION_SQUARE:
+			cout << "\nвведите индексы водоемов, площадь которых вы хотите сравнить\n";
+			cin >> index >> index_2;
+			reserviors[index].comp_square(reserviors[index_2]);
+			break;
 		default:
 			break;
 		}

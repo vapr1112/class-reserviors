@@ -36,3 +36,32 @@ void reservoir::print() const//показывает водоем и информацию о нем
 	cout << "\nширина " << width;
 	cout << "\nглубина " << depth;
 }
+
+void reservoir:: comp_square(reservoir reservoir_p)//сравнивает площади водоемов
+{
+	int flag = 0;//записывается результат проверки, водоемы относятся к одному типу или к разным
+	int square = length * width, square_2 = reservoir_p.length * reservoir_p.width;//площади водоемов
+	strcmp(type, reservoir_p.type) == 0 ? flag = 1 : flag = 0;
+
+	if (flag == 0)
+	{
+		cout << "\nэто водоемы разных типов, напишите водоемы одного типа\n";
+	}
+
+	else
+	{
+		if (square > square_2)
+		{
+			cout << "\nплощадь первого водоема больше\n";
+		}
+		else if (square < square_2)
+		{
+			cout << "\nплощадь второго водоема больше\n";
+		}
+
+		else
+		{
+			cout << "\nплощади водоемов равны\n";
+		}
+	}
+}
