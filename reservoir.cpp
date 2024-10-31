@@ -37,11 +37,11 @@ void reservoir::print() const//показывает водоем и информацию о нем
 	cout << "\nглубина " << depth;
 }
 
-void reservoir:: comp_square(reservoir reservoir_p)//сравнивает площади водоемов
+void reservoir:: comp_square(reservoir reservoir_p) const//сравнивает площади водоемов
 {
 	int flag = 0;//записывается результат проверки, водоемы относятся к одному типу или к разным
 	int square = length * width, square_2 = reservoir_p.length * reservoir_p.width;//площади водоемов
-	strcmp(type, reservoir_p.type) == 0 ? flag = 1 : flag = 0;
+	strcmp(type, reservoir_p.type) == 0 ? flag = 1 : flag = 0;//проверяет, относятся ли водоемы к одному типу
 
 	if (flag == 0)
 	{
@@ -64,4 +64,11 @@ void reservoir:: comp_square(reservoir reservoir_p)//сравнивает площади водоемов
 			cout << "\nплощади водоемов равны\n";
 		}
 	}
+}
+
+reservoir reservoir::copy(reservoir reservoir_p)//создает копию объекта
+{
+	reservoir new_reservoir{ reservoir_p };
+
+	return new_reservoir;
 }

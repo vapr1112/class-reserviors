@@ -40,15 +40,21 @@ int main()
 			cin >> index;
 			reserviors[index].square();
 			break;
-		case COMPARASION_TYPE:
+		case COMPARASION_TYPE://проверяет, относятся ли водоемы к одному типу
 			cout << "\nвведите индексы водоемов, тип которых вы хотите сравнить\n";
 			cin >> index >> index_2;
 			reserviors[index].comp_type(reserviors[index_2]);
 			break;
-		case COMPARASION_SQUARE:
+		case COMPARASION_SQUARE://сравнивает площади водоемов
 			cout << "\nвведите индексы водоемов, площадь которых вы хотите сравнить\n";
 			cin >> index >> index_2;
 			reserviors[index].comp_square(reserviors[index_2]);
+			break;
+		case COPY_OBJ:
+			reserviors = add_copy(reserviors, size);//в массив добавляется копия объекта
+			break;
+		case ADD_FILE:
+			add_file(reserviors, size);
 			break;
 		default:
 			break;
