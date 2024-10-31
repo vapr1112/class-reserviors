@@ -50,11 +50,6 @@ reservoir* deleting(reservoir* reserviors, int& size)//удаление объекта из масси
 		new_reservoirs[i].set_depth(reserviors[i].get_depth());
 	}
 
-	//if (size == 0)
-	//{
-	//	new_reservoirs = nullptr;
-	//}
-
 	delete[] reserviors;
 
 	return new_reservoirs;

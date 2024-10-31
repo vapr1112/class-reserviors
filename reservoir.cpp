@@ -28,7 +28,7 @@ void reservoir::set_name(const char* name_p)
 	strcpy_s(name, strlen(name_p) + 1, name_p);
 }
 
-void reservoir::print()//показывает водоем и информацию о нем
+void reservoir::print() const//показывает водоем и информацию о нем
 {
 	printf("\nназвание водоема %s", name);
 	printf("\nтип водоема %s", type);

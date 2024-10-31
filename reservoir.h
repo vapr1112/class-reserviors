@@ -71,12 +71,17 @@ public:
 		return depth;
 	}
 
-	void print();//показывает водоем и информацию о нем
+	void print() const;//показывает водоем и информацию о нем
 
 	//другие методы
-	void volume()//показывает объем водоема
+	void volume() const //показывает объем водоема
 	{
 		cout << "\nобъем данного водоема " << depth * length * width;
+	}
+
+	void square() const //показывает площадь водоема
+	{
+		cout << "\n площадь водоема " << length * width;
 	}
 
 	~reservoir()//деструктор

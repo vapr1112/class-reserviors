@@ -30,12 +30,15 @@ int main()
 				reserviors[i].print();
 			}
 			break;
-		case VOLUME:
+		case VOLUME://показывает объем водоема
 			cout << "\nвведите индекс водоема\n";
 			cin >> index;
 			reserviors[index].volume();
 			break;
-
+		case SQUARE://показывает площадь водоема
+			cout << "\nвведите индекс водоема\n";
+			cin >> index;
+			reserviors[index].square();
 		default:
 			break;
 		}
