@@ -39,6 +39,12 @@ int main()
 			cout << "\nвведите индекс водоема\n";
 			cin >> index;
 			reserviors[index].square();
+			break;
+		case COMPARASION_TYPE:
+			cout << "\nвведите индексы водоемов, тип которых вы хотите сравнить\n";
+			cin >> index >> index_2;
+			reserviors[index].comp_type(reserviors[index_2]);
+			break;
 		default:
 			break;
 		}

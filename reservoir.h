@@ -84,6 +84,11 @@ public:
 		cout << "\n площадь водоема " << length * width;
 	}
 
+	void comp_type(reservoir reservoir_p) const//проверяет, относятся ли водоемы к одному типу
+	{
+		strcmp(type, reservoir_p.type) == 0 ? cout << "\nводоемы относятся к одному типу\n" : cout << "\nводоемы относятся к разным типам\n";
+	}
+
 	~reservoir()//деструктор
 	{
 		delete[] name;
