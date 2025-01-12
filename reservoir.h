@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "negative_number.h" 
 #define SIZE 2000
 
 using namespace std;
@@ -33,16 +34,19 @@ public:
 
 	void set_length(int length_p)
 	{
+		if (length_p < 0) throw negative_number("длина не может быть отрицательной");
 		length = length_p;
 	}
 
 	void set_width(int width_p)
 	{
+		if (width_p < 0) throw negative_number("ширина не может быть отрицательной");
 		width = width_p;
 	}
 
 	void set_depth(int depth_p)
 	{
+		if (depth_p < 0) throw negative_number("глубина не может быть отрицательной");
 		depth = depth_p;
 	}
 

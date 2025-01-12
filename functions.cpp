@@ -39,6 +39,7 @@ reservoir* adding(reservoir* reserviors, int& size)//добавление объекта в массив
 
 reservoir* deleting(reservoir* reserviors, int& size)//удаление объекта из массива объектов reserviors
 {
+	if (size == 0) throw delete_error("массив пуст");
 	reservoir* new_reservoirs = new reservoir[--size];
 
 	for (int i = 0; i < size; i++)//копирование старых объектов из старого массива в новый без последнего объекта
@@ -92,11 +93,7 @@ int add_file(reservoir* reserviors, int size)
 	FILE* file;
 	int count = 0;
 
-	if (fopen_s(&file, "reserviors.txt", "w") != NULL)
-	{
-		cout << "Не удалось открыть файл\n";
-		return 15;
-	}
+	if (fopen_s(&file, "reserviors.txt", "w") != NULL) throw error_with_file("не удалось открыть файл");
 
 	fprintf_s(file, "%d\n", size);
 
@@ -107,10 +104,6 @@ int add_file(reservoir* reserviors, int size)
 		fputc('\n', file);
 	}
 
-	if (fclose(file) != NULL)
-	{
-		cout << "Не удалось закрыть файл\n";
-		return 29;
-	}
+	if (fclose(file) != NULL) throw error_with_file("не удалось закрыть файл");
 
 }

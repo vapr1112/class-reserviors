@@ -1,5 +1,7 @@
 #pragma once
 #include "Reservoir.h"
+#include "delete_error.h"
+#include "error_with_file.h"
 
 reservoir* adding(reservoir* reserviors, int& size);
 

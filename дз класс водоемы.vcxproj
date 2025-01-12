@@ -127,10 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="delete_error.h" />
+    <ClInclude Include="error_with_file.h" />
     <ClInclude Include="Header.h" />
+    <ClInclude Include="negative_number.h" />
     <ClInclude Include="reservoir.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="delete_error.cpp" />
+    <ClCompile Include="error_with_file.cpp" />
+    <ClCompile Include="negative_number.cpp" />
     <ClCompile Include="reservoir.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="functions.cpp" />
